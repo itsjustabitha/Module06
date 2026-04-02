@@ -7,15 +7,17 @@ import './App.css'
 // import City from './components/City'
 // import Pet from './components/Pet'
 // import Greeting from './components/Greeting' // Exercise 01 Side 31
-import FullName from './components/FullName'
-import ComplexComment from './components/ComplexComment'
-import Comment from './components/Comment'
-import Callout from './components/Callout'
-import MoviesList from './components/MoviesList'
+// import FullName from './components/FullName'
+// import ComplexComment from './components/ComplexComment'
+// import Comment from './components/Comment'
+// import Callout from './components/Callout'
+// import MoviesList from './components/MoviesList'
 // import BigCats from './components/BigCats' // Exercise 02 Slide 47
 // import SingleCat from './components/SingleCat' // Exercise 02 Slide 47
-import MoodChanger from './components/MoodChanger'
-import EmojiChanger from './components/Emoji' //  Exercide 03 Slide 58
+//import MoodChanger from './components/MoodChanger'
+// import EmojiChanger from './components/Emoji' //  Exercide 03 Slide 58
+import BirthdayTranslator from './components/BirthdayTranslator' 
+import Weather from './components/Weather'
 
 
 
@@ -24,9 +26,9 @@ function App() {
   return (
     <>
 
-<MoodChanger/>
-<EmojiChanger/>
 
+<BirthdayTranslator/>
+<Weather/>
 
     </>
   )
@@ -64,6 +66,9 @@ export default App
 
 
 // ============================= PREVIOUS EXAMPLES - I COMMENTED THEM OUT SO I DON'T GET CONFUSED. ============================
+
+{/* <MoodChanger/> */}
+
 
 // <MoviesList />
 // object storing comment data - passed as props
