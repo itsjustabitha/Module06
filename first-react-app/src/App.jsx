@@ -12,49 +12,21 @@ import ComplexComment from './components/ComplexComment'
 import Comment from './components/Comment'
 import Callout from './components/Callout'
 import MoviesList from './components/MoviesList'
-import BigCats from './components/BigCats' // Exercise 02 Slide 47
-import SingleCat from './components/SingleCat' // Exercise 02 Slide 47
+// import BigCats from './components/BigCats' // Exercise 02 Slide 47
+// import SingleCat from './components/SingleCat' // Exercise 02 Slide 47
+import MoodChanger from './components/MoodChanger'
+import EmojiChanger from './components/Emoji' //  Exercide 03 Slide 58
 
 
-
-
-// object storing comment data - passed as props
-const comment = {
-date: new Date(),
-text: 'I hope you enjoy learning React!',
-author: { // author is also an object
-name: 'Hello Kitty',
-avatarUrl: 'https://placecats.com/g/64/64',
-},
-};
 
 
 function App() {
   return (
     <>
 
-<BigCats />
-<SingleCat 
-  name="Cheetah" 
-  latinName="Acinonyx jubatus" 
-  imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYp5JeE-1jd8lFU92CwrFaclY7NrtfTpaJqI53WMfVnRzvaZySlrxpLPvyiWEMrqSs9O_NkqURthHKg1SZjUHFMWCmeKhwu1dgcOXVw&s=10" 
-/>
+<MoodChanger/>
+<EmojiChanger/>
 
-<MoviesList />
-
-<Callout title="Nested React Component"
-message="Simple message with a fancy box applied via composition">
-<FullName first="Elon" last="Musk" />
-</Callout>
-
-
-      <ComplexComment author={comment.author}
-        date={comment.date}
-        text={comment.text}/>
-
-        <Comment author={comment.author}
-        date={comment.date}
-        text={comment.text}/>
 
     </>
   )
@@ -62,10 +34,20 @@ message="Simple message with a fancy box applied via composition">
 
 export default App
 
+
+
+
+
+
+
 //  ============================= Exercise 01 Side 31 =============================
+// import Greeting from './components/Greeting' // Exercise 01 Side 31
 //  <Greeting name="Alice"/> */}
 
 // ============================= Exercise 02 Side 47 =============================
+// import BigCats from './components/BigCats' // Exercise 02 Slide 47
+// import SingleCat from './components/SingleCat' // Exercise 02 Slide 47
+
 // <BigCats />
 // <SingleCat 
 //   name="Cheetah" 
@@ -73,10 +55,9 @@ export default App
 //   imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYp5JeE-1jd8lFU92CwrFaclY7NrtfTpaJqI53WMfVnRzvaZySlrxpLPvyiWEMrqSs9O_NkqURthHKg1SZjUHFMWCmeKhwu1dgcOXVw&s=10" 
 // />
 
-
-
-
-
+// ============================= Exercide 03 Slide 58 =============================
+// import EmojiChanger from './components/Emoji' //  Exercide 03 Slide 58
+// <EmojiChanger/>
 
 
 
@@ -84,7 +65,30 @@ export default App
 
 // ============================= PREVIOUS EXAMPLES - I COMMENTED THEM OUT SO I DON'T GET CONFUSED. ============================
 
+// <MoviesList />
+// object storing comment data - passed as props
+// const comment = {
+// date: new Date(),
+// text: 'I hope you enjoy learning React!',
+// author: { // author is also an object
+// name: 'Hello Kitty',
+// avatarUrl: 'https://placecats.com/g/64/64',
+// },
+// };
 
+// <Callout title="Nested React Component"
+// message="Simple message with a fancy box applied via composition">
+// <FullName first="Elon" last="Musk" />
+// </Callout>
+
+
+//       <ComplexComment author={comment.author}
+//         date={comment.date}
+//         text={comment.text}/>
+
+//         <Comment author={comment.author}
+//         date={comment.date}
+//         text={comment.text}/>
 
 
 
