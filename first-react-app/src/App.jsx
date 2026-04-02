@@ -11,7 +11,7 @@ import './App.css'
 // import ComplexComment from './components/ComplexComment'
 // import Comment from './components/Comment'
 // import Callout from './components/Callout'
-// import MoviesList from './components/MoviesList'
+import MoviesList from './components/MoviesList'
 // import BigCats from './components/BigCats' // Exercise 02 Slide 47
 // import SingleCat from './components/SingleCat' // Exercise 02 Slide 47
 //import MoodChanger from './components/MoodChanger'
@@ -26,7 +26,7 @@ function App() {
   return (
     <>
 
-
+<MoviesList/>
 <BirthdayTranslator/>
 <Weather/>
 
