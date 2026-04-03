@@ -11,14 +11,14 @@ import './App.css'
 // import ComplexComment from './components/ComplexComment'
 // import Comment from './components/Comment'
 // import Callout from './components/Callout'
- import MoviesList from './components/MoviesList'
-// import BigCats from './components/BigCats' // Exercise 02 Slide 47
-// import SingleCat from './components/SingleCat' // Exercise 02 Slide 47 & Exercise 03 Slide 72
+// import MoviesList from './components/MoviesList'
+import BigCats from './components/BigCats' // Exercise 02 Slide 47 & Exercise 03 Slide 72
+ import SingleCat from './components/SingleCat' // Exercise 02 Slide 47 
 // import MoodChanger from './components/MoodChanger'
 // import EmojiChanger from './components/Emoji' //  Exercide 03 Slide 58
 // import BirthdayTranslator from './components/BirthdayTranslator' 
 // import Weather from './components/Weather'
-import LoginForm from './components/LoginForm' 
+//import LoginForm from './components/LoginForm' 
 
 
 
@@ -26,8 +26,7 @@ import LoginForm from './components/LoginForm'
 function App() {
   return (
     <>
-<LoginForm />
-<MoviesList/>
+<BigCats />
     </>
   )
 }
@@ -67,7 +66,9 @@ export default App
 
 // ============================= PREVIOUS EXAMPLES - I COMMENTED THEM OUT SO I DON'T GET CONFUSED. ============================
 
-{/* <MoviesList/>
+{/* 
+  <LoginForm />
+<MoviesList/>
 <BirthdayTranslator/>
 <Weather/> 
  <MoodChanger/> */}

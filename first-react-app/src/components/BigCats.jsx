@@ -1,6 +1,7 @@
 // BigCats.jsx - Exercise 02 Slide 47
-import { useState } from 'react' // Exercise 03 Slide 72
 import SingleCat from './SingleCat' // Exercise 02 Slide 47
+import { useState } from 'react' // Exercise 03 Slide 72
+import AddCatForm from './AddCatForm' // Exercise 05 Slide 80
 
 const allCats = [ // I renamed 'cats' to 'allCats' for Exercise 04 Slide 72
   { id: 1, name: 'Cheetah', latinName: 'Acinonyx jubatus', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYp5JeE-1jd8lFU92CwrFaclY7NrtfTpaJqI53WMfVnRzvaZySlrxpLPvyiWEMrqSs9O_NkqURthHKg1SZjUHFMWCmeKhwu1dgcOXVw&s=10' },
@@ -36,12 +37,26 @@ function BigCats() {
     setCurrentCats(allCats)
   }
 
+ // NEW: Add cat — clone array, add new cat with unique id - // Exercise 05 Slide 80
+  const handleAddCat = (newCat) => {
+    const newId = currentCats.length > 0
+      ? Math.max(...currentCats.map(c => c.id)) + 1
+      : 1
+    setCurrentCats([...currentCats, { ...newCat, id: newId }])
+  }
+
+  // NEW: Delete cat — filter out the cat with matching id  - // Exercise 05 Slide 80
+  const handleDeleteCat = (idToDelete) => {
+    setCurrentCats(currentCats.filter(cat => cat.id !== idToDelete))
+  }
+
   const catItems = currentCats.map(cat => (
     <SingleCat
       key={cat.id}
       name={cat.name}
       latinName={cat.latinName}
       imageUrl={cat.imageUrl}
+      onDelete={handleDeleteCat} // NEW: pass delete handler down - // Exercise 05 Slide 80
     />
   ))
 
@@ -55,6 +70,7 @@ function BigCats() {
         <button onClick={handleReset}>Reset</button>
       </div>
       <ul>{catItems}</ul>
+       <AddCatForm onAddCat={handleAddCat} /> {/* NEW - // Exercise 05 Slide 80 */}
     </div>
   )
 }
