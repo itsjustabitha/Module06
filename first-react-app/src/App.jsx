@@ -22,6 +22,7 @@ import './App.css'
 //import LoginForm from './components/LoginForm' 
 import { ErrorBoundary } from 'react-error-boundary'
 import ExplodingBomb from './components/ExplodingBomb'
+import Calculator from './components/Calculator' //  Exercide 06 Slide 80
 
 
 
@@ -29,8 +30,8 @@ import ExplodingBomb from './components/ExplodingBomb'
 function App() {
   return (
     <>
-  
-<ExplodingBomb/>
+  <Calculator />
+
     </>
   )
 }
@@ -71,6 +72,7 @@ export default App
 // ============================= PREVIOUS EXAMPLES - I COMMENTED THEM OUT SO I DON'T GET CONFUSED. ============================
 
 {/* 
+  <ExplodingBomb/>
   <LoginForm />
 <MoviesList/>
 <BirthdayTranslator/>
