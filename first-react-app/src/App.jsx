@@ -13,19 +13,20 @@ import './App.css'
 // import Callout from './components/Callout'
 // import MoviesList from './components/MoviesList'
 // import BigCats from './components/BigCats' // Exercise 02 Slide 47
-// import SingleCat from './components/SingleCat' // Exercise 02 Slide 47
+// import SingleCat from './components/SingleCat' // Exercise 02 Slide 47 & Exercise 03 Slide 72
 // import MoodChanger from './components/MoodChanger'
 // import EmojiChanger from './components/Emoji' //  Exercide 03 Slide 58
 // import BirthdayTranslator from './components/BirthdayTranslator' 
 // import Weather from './components/Weather'
- import BigCats from './components/BigCats' // Exercise 03 Slide 72
+import LoginForm from './components/LoginForm' 
+
 
 
 
 function App() {
   return (
     <>
-<BigCats/>
+<LoginForm />
 
     </>
   )
