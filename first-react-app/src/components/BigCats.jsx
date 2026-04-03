@@ -1,8 +1,8 @@
 // BigCats.jsx - Exercise 02 Slide 47
+import { useState } from 'react' // Exercise 03 Slide 72
+import SingleCat from './SingleCat' // Exercise 02 Slide 47
 
-import SingleCat from './SingleCat'
-
-const cats = [
+const allCats = [
   { id: 1, name: 'Cheetah', latinName: 'Acinonyx jubatus', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYp5JeE-1jd8lFU92CwrFaclY7NrtfTpaJqI53WMfVnRzvaZySlrxpLPvyiWEMrqSs9O_NkqURthHKg1SZjUHFMWCmeKhwu1dgcOXVw&s=10' },
   { id: 2, name: 'Cougar', latinName: 'Puma concolor', imageUrl: 'https://www.wildgratitude.com/wp-content/uploads/2024/01/cougar-power-animal.jpg.webp' },
   { id: 3, name: 'Jaguar', latinName: 'Panthera onca', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg' },
@@ -13,7 +13,30 @@ const cats = [
 ]
 
 function BigCats() {
-  const catItems = cats.map(cat => (
+  const [currentCats, setCurrentCats] = useState(allCats)
+
+  const handleSort = () => {
+    const newCats = [...currentCats]
+    newCats.sort((a, b) => a.name.localeCompare(b.name))
+    setCurrentCats(newCats)
+  }
+
+  const handleReverse = () => {
+    const newCats = [...currentCats]
+    newCats.reverse()
+    setCurrentCats(newCats)
+  }
+
+  const handleFilterPanthera = () => {
+    const newCats = allCats.filter(cat => cat.latinName.startsWith('Panthera'))
+    setCurrentCats(newCats)
+  }
+
+  const handleReset = () => {
+    setCurrentCats(allCats)
+  }
+
+  const catItems = currentCats.map(cat => (
     <SingleCat
       key={cat.id}
       name={cat.name}
@@ -25,9 +48,35 @@ function BigCats() {
   return (
     <div className="BigCats componentBox">
       <h2>Big Cats</h2>
+      <div>
+        <button onClick={handleSort}>Sort A–Z</button>
+        <button onClick={handleReverse}>Reverse</button>
+        <button onClick={handleFilterPanthera}>Panthera Only</button>
+        <button onClick={handleReset}>Reset</button>
+      </div>
       <ul>{catItems}</ul>
     </div>
   )
 }
+// ============================= BigCats.jsx - Exercise 02 Slide 47 =============================
+// function BigCats() {
+//   const catItems = cats.map(cat => (
+//     <SingleCat
+//       key={cat.id}
+//       name={cat.name}
+//       latinName={cat.latinName}
+//       imageUrl={cat.imageUrl}
+//     />
+//   ))
+
+//   return (
+//     <div className="BigCats componentBox">
+//       <h2>Big Cats</h2>
+//       <ul>{catItems}</ul>
+//     </div>
+//   )
+// }
 
 export default BigCats
+
+

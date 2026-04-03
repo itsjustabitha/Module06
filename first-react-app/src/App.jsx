@@ -11,24 +11,21 @@ import './App.css'
 // import ComplexComment from './components/ComplexComment'
 // import Comment from './components/Comment'
 // import Callout from './components/Callout'
-import MoviesList from './components/MoviesList'
+// import MoviesList from './components/MoviesList'
 // import BigCats from './components/BigCats' // Exercise 02 Slide 47
 // import SingleCat from './components/SingleCat' // Exercise 02 Slide 47
-//import MoodChanger from './components/MoodChanger'
+// import MoodChanger from './components/MoodChanger'
 // import EmojiChanger from './components/Emoji' //  Exercide 03 Slide 58
-import BirthdayTranslator from './components/BirthdayTranslator' 
-import Weather from './components/Weather'
-
+// import BirthdayTranslator from './components/BirthdayTranslator' 
+// import Weather from './components/Weather'
+ import BigCats from './components/BigCats' // Exercise 03 Slide 72
 
 
 
 function App() {
   return (
     <>
-
-<MoviesList/>
-<BirthdayTranslator/>
-<Weather/>
+<BigCats/>
 
     </>
   )
@@ -62,12 +59,17 @@ export default App
 // <EmojiChanger/>
 
 
+// ============================= BigCats.jsx - Exercise 03 Slide 72 =============================
+
 
 
 
 // ============================= PREVIOUS EXAMPLES - I COMMENTED THEM OUT SO I DON'T GET CONFUSED. ============================
 
-{/* <MoodChanger/> */}
+{/* <MoviesList/>
+<BirthdayTranslator/>
+<Weather/> 
+ <MoodChanger/> */}
 
 
 // <MoviesList />
