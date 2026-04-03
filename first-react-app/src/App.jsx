@@ -12,13 +12,16 @@ import './App.css'
 // import Comment from './components/Comment'
 // import Callout from './components/Callout'
 // import MoviesList from './components/MoviesList'
-import BigCats from './components/BigCats' // Exercise 02 Slide 47 & Exercise 03 Slide 72
- import SingleCat from './components/SingleCat' // Exercise 02 Slide 47 
+// import BigCats from './components/BigCats' // Exercise 02 Slide 47 & Exercise 03 Slide 72
+// import ErrorMessage from './components/ErrorMessage'
+// import SingleCat from './components/SingleCat' // Exercise 02 Slide 47 
 // import MoodChanger from './components/MoodChanger'
 // import EmojiChanger from './components/Emoji' //  Exercide 03 Slide 58
 // import BirthdayTranslator from './components/BirthdayTranslator' 
 // import Weather from './components/Weather'
 //import LoginForm from './components/LoginForm' 
+import { ErrorBoundary } from 'react-error-boundary'
+import ExplodingBomb from './components/ExplodingBomb'
 
 
 
@@ -26,7 +29,8 @@ import BigCats from './components/BigCats' // Exercise 02 Slide 47 & Exercise 03
 function App() {
   return (
     <>
-<BigCats />
+  
+<ExplodingBomb/>
     </>
   )
 }
