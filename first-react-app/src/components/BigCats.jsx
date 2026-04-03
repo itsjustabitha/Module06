@@ -2,7 +2,7 @@
 import { useState } from 'react' // Exercise 03 Slide 72
 import SingleCat from './SingleCat' // Exercise 02 Slide 47
 
-const allCats = [
+const allCats = [ // I renamed 'cats' to 'allCats' for Exercise 04 Slide 72
   { id: 1, name: 'Cheetah', latinName: 'Acinonyx jubatus', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVYp5JeE-1jd8lFU92CwrFaclY7NrtfTpaJqI53WMfVnRzvaZySlrxpLPvyiWEMrqSs9O_NkqURthHKg1SZjUHFMWCmeKhwu1dgcOXVw&s=10' },
   { id: 2, name: 'Cougar', latinName: 'Puma concolor', imageUrl: 'https://www.wildgratitude.com/wp-content/uploads/2024/01/cougar-power-animal.jpg.webp' },
   { id: 3, name: 'Jaguar', latinName: 'Panthera onca', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg' },

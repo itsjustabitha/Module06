@@ -60,7 +60,7 @@ export default App
 
 
 // ============================= BigCats.jsx - Exercise 03 Slide 72 =============================
-
+ // <BigCats />
 
 
 
